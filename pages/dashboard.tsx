@@ -93,6 +93,27 @@ const SignIn = (): JSX.Element => {
                         </svg>
                         My tasks
                       </a>
+                      <a
+                        href="#"
+                        className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 group flex items-center px-2 py-2 text-base leading-5 font-medium rounded-md"
+                      >
+                        <svg
+                          className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                          />
+                        </svg>
+                        My tasks
+                      </a>
 
                       <a
                         href="#"
@@ -199,6 +220,7 @@ const SignIn = (): JSX.Element => {
                             <span className="text-gray-900 text-sm font-medium truncate">
                               Jessy Schwarz
                             </span>
+                            <br />
                             <span className="text-gray-500 text-sm truncate">
                               @jessyschwarz
                             </span>
@@ -220,61 +242,63 @@ const SignIn = (): JSX.Element => {
                       </span>
                     </button>
                   </div>
-                  <div
-                    className="z-10 mx-3 origin-top absolute right-0 left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="options-menu"
-                  >
-                    <div className="py-1">
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        View profile
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        Settings
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        Notifications
-                      </a>
+                  {false && (
+                    <div
+                      className="z-10 mx-3 origin-top absolute right-0 left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="options-menu"
+                    >
+                      <div className="py-1">
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          View profile
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Settings
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Notifications
+                        </a>
+                      </div>
+                      <div className="py-1">
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Get desktop app
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Support
+                        </a>
+                      </div>
+                      <div className="py-1">
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Logout
+                        </a>
+                      </div>
                     </div>
-                    <div className="py-1">
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        Get desktop app
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        Support
-                      </a>
-                    </div>
-                    <div className="py-1">
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        role="menuitem"
-                      >
-                        Logout
-                      </a>
-                    </div>
-                  </div>
+                  )}
                 </div>
                 <div className="px-3 mt-5">
                   <label htmlFor="search" className="sr-only">
@@ -330,6 +354,28 @@ const SignIn = (): JSX.Element => {
                         />
                       </svg>
                       Home
+                    </a>
+
+                    <a
+                      href="#"
+                      className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    >
+                      <svg
+                        className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                        />
+                      </svg>
+                      Messages
                     </a>
 
                     <a
@@ -494,61 +540,63 @@ const SignIn = (): JSX.Element => {
                         />
                       </button>
                     </div>
-                    <div
-                      className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
-                      role="menu"
-                      aria-orientation="vertical"
-                      aria-labelledby="user-menu"
-                    >
-                      <div className="py-1" role="none">
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          View profile
-                        </a>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          Settings
-                        </a>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          Notifications
-                        </a>
+                    {false && (
+                      <div
+                        className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="user-menu"
+                      >
+                        <div className="py-1" role="none">
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            View profile
+                          </a>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Settings
+                          </a>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Notifications
+                          </a>
+                        </div>
+                        <div className="py-1" role="none">
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Get desktop app
+                          </a>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Support
+                          </a>
+                        </div>
+                        <div className="py-1" role="none">
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Logout
+                          </a>
+                        </div>
                       </div>
-                      <div className="py-1" role="none">
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          Get desktop app
-                        </a>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          Support
-                        </a>
-                      </div>
-                      <div className="py-1" role="none">
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          role="menuitem"
-                        >
-                          Logout
-                        </a>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -578,305 +626,1029 @@ const SignIn = (): JSX.Element => {
                   </button>
                 </div>
               </div>
-              <div className="px-4 mt-6 sm:px-6 lg:px-8">
-                <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
-                  Pinned Projects
-                </h2>
-                <ul className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 xl:grid-cols-4 mt-3">
-                  <li className="relative col-span-1 flex shadow-sm rounded-md">
-                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-pink-600 text-white text-sm font-medium rounded-l-md">
-                      GA
-                    </div>
-                    <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                      <div className="flex-1 px-4 py-2 text-sm truncate">
-                        <a
-                          href="#"
-                          className="text-gray-900 font-medium hover:text-gray-600"
-                        >
-                          GraphQL API
-                        </a>
-                        <p className="text-gray-500">12 Members</p>
+              <div className="hidden mt-8 mx-8 sm:block">
+                <div>
+                  <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
+                    Pinned Projects
+                  </h2>
+                  <ul className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <li className="col-span-1 flex shadow-sm rounded-md">
+                      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-pink-600 text-white text-sm font-medium rounded-l-md">
+                        GA
                       </div>
-                      <div className="flex-shrink-0 pr-2">
-                        <button
-                          id="pinned-project-options-menu-0"
-                          aria-haspopup="true"
-                          className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-                        >
-                          <span className="sr-only">Open options</span>
-                          <svg
-                            className="w-5 h-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
+                      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                        <div className="flex-1 px-4 py-2 text-sm truncate">
+                          <a
+                            href="#"
+                            className="text-gray-900 font-medium hover:text-gray-600"
                           >
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                          </svg>
-                        </button>
-                        <div
-                          className="z-10 mx-3 origin-top-right absolute right-10 top-3 w-48 mt-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
-                          role="menu"
-                          aria-orientation="vertical"
-                          aria-labelledby="pinned-project-options-menu-0"
-                        >
-                          <div className="py-1" role="none">
-                            <a
-                              href="#"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                              role="menuitem"
+                            Graph API
+                          </a>
+                          <p className="text-gray-500">16 Members</p>
+                        </div>
+                        <div className="flex-shrink-0 pr-2">
+                          <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span className="sr-only">Open options</span>
+                            <svg
+                              className="w-5 h-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
                             >
-                              View
-                            </a>
+                              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li className="col-span-1 flex shadow-sm rounded-md">
+                      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-purple-600 text-white text-sm font-medium rounded-l-md">
+                        CD
+                      </div>
+                      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                        <div className="flex-1 px-4 py-2 text-sm truncate">
+                          <a
+                            href="#"
+                            className="text-gray-900 font-medium hover:text-gray-600"
+                          >
+                            Component Design
+                          </a>
+                          <p className="text-gray-500">12 Members</p>
+                        </div>
+                        <div className="flex-shrink-0 pr-2">
+                          <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span className="sr-only">Open options</span>
+                            <svg
+                              className="w-5 h-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li className="col-span-1 flex shadow-sm rounded-md">
+                      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
+                        T
+                      </div>
+                      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                        <div className="flex-1 px-4 py-2 text-sm truncate">
+                          <a
+                            href="#"
+                            className="text-gray-900 font-medium hover:text-gray-600"
+                          >
+                            Templates
+                          </a>
+                          <p className="text-gray-500">16 Members</p>
+                        </div>
+                        <div className="flex-shrink-0 pr-2">
+                          <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span className="sr-only">Open options</span>
+                            <svg
+                              className="w-5 h-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li className="col-span-1 flex shadow-sm rounded-md">
+                      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-green-500 text-white text-sm font-medium rounded-l-md">
+                        RC
+                      </div>
+                      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+                        <div className="flex-1 px-4 py-2 text-sm truncate">
+                          <a
+                            href="#"
+                            className="text-gray-900 font-medium hover:text-gray-600"
+                          >
+                            React Components
+                          </a>
+                          <p className="text-gray-500">8 Members</p>
+                        </div>
+                        <div className="flex-shrink-0 pr-2">
+                          <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span className="sr-only">Open options</span>
+                            <svg
+                              className="w-5 h-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-4">
+                  <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
+                    Targets
+                  </h2>
+                  <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                              />
+                            </svg>
                           </div>
-                          <div className="py-1" role="none">
-                            <a
-                              href="#"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                              role="menuitem"
+                          <div className="ml-5 w-0 flex-1">
+                            <dt className="text-sm font-medium text-gray-500 truncate">
+                              Total Subscribers
+                            </dt>
+                            <dd className="flex items-baseline">
+                              <div className="text-2xl font-semibold text-gray-900">
+                                71,897
+                              </div>
+
+                              <div className="ml-2 flex items-baseline text-sm font-semibold text-green-600">
+                                <svg
+                                  className="self-center flex-shrink-0 h-5 w-5 text-green-500"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                                <span className="sr-only">Increased by</span>
+                                122
+                              </div>
+                            </dd>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 px-4 py-4 sm:px-6">
+                        <div className="text-sm">
+                          <a
+                            href="#"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                          >
+                            {" "}
+                            View all
+                            <span className="sr-only">
+                              {" "}
+                              Total Subscribers stats
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
                             >
-                              Removed from pinned
-                            </a>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                              role="menuitem"
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ml-5 w-0 flex-1">
+                            <dt className="text-sm font-medium text-gray-500 truncate">
+                              Avg. Open Rate
+                            </dt>
+                            <dd className="flex items-baseline">
+                              <div className="text-2xl font-semibold text-gray-900">
+                                58.16%
+                              </div>
+
+                              <div className="ml-2 flex items-baseline text-sm font-semibold text-green-600">
+                                <svg
+                                  className="self-center flex-shrink-0 h-5 w-5 text-green-500"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                                <span className="sr-only">Increased by</span>
+                                5.4%
+                              </div>
+                            </dd>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 px-4 py-4 sm:px-6">
+                        <div className="text-sm">
+                          <a
+                            href="#"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                          >
+                            {" "}
+                            View all
+                            <span className="sr-only">
+                              {" "}
+                              Avg. Open Rate stats
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <svg
+                              className="h-6 w-6 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              aria-hidden="true"
                             >
-                              Share
-                            </a>
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ml-5 w-0 flex-1">
+                            <dt className="text-sm font-medium text-gray-500 truncate">
+                              Avg. Click Rate
+                            </dt>
+                            <dd className="flex items-baseline">
+                              <div className="text-2xl font-semibold text-gray-900">
+                                24.57%
+                              </div>
+
+                              <div className="ml-2 flex items-baseline text-sm font-semibold text-red-600">
+                                <svg
+                                  className="self-center flex-shrink-0 h-5 w-5 text-red-500"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                                <span className="sr-only">Decreased by</span>
+                                3.2%
+                              </div>
+                            </dd>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 px-4 py-4 sm:px-6">
+                        <div className="text-sm">
+                          <a
+                            href="#"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                          >
+                            {" "}
+                            View all
+                            <span className="sr-only">
+                              {" "}
+                              Avg. Click Rate stats
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </dl>
+                </div>
+                <div className="mt-4">
+                  <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
+                    Work
+                  </h2>
+                  <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 pt-5 sm:px-6 sm:pt-6">
+                        <dt className="text-sm font-medium text-gray-500 truncate">
+                          Tasks
+                        </dt>
+                      </div>
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <div className="flow-root">
+                            <ul className="-mb-8">
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Applied to{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Front End Developer
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-20">
+                                          Sep 20
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Advanced to phone screening by{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Bethany Blake
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-22">
+                                          Sep 22
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Completed phone screening with{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Martha Gardner
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-28">
+                                          Sep 28
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Advanced to interview by{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Bethany Blake
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-30">
+                                          Sep 30
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Completed interview with{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Katherine Snyder
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-10-04">Oct 4</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </li>
-                </ul>
-              </div>
 
-              <div className="mt-10 sm:hidden">
-                <div className="px-4 sm:px-6">
-                  <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
-                    Projects
-                  </h2>
-                </div>
-                <ul className="mt-3 border-t border-gray-200 divide-y divide-gray-100">
-                  <li>
-                    <a
-                      href="#"
-                      className="group flex items-center justify-between px-4 py-4 hover:bg-gray-50 sm:px-6"
-                    >
-                      <span className="flex items-center truncate space-x-3">
-                        <span
-                          className="w-2.5 h-2.5 flex-shrink-0 rounded-full bg-pink-600"
-                          aria-hidden="true"
-                        ></span>
-                        <span className="font-medium truncate text-sm leading-6">
-                          GraphQL API
-                          <span className="truncate font-normal text-gray-500">
-                            {" in Engineering "}
-                          </span>
-                        </span>
-                      </span>
-                      <svg
-                        className="ml-4 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 pt-5 sm:px-6 sm:pt-6">
+                        <dt className="text-sm font-medium text-gray-500 truncate">
+                          Feed
+                        </dt>
+                      </div>
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <div className="flow-root">
+                            <ul className="-mb-8">
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Applied to{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Front End Developer
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-20">
+                                          Sep 20
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
 
-              <div className="hidden mt-8 sm:block">
-                <div className="align-middle inline-block min-w-full border-b border-gray-200">
-                  <table className="min-w-full">
-                    <thead>
-                      <tr className="border-t border-gray-200">
-                        <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          <span className="lg:pl-2">Project</span>
-                        </th>
-                        <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Members
-                        </th>
-                        <th className="hidden md:table-cell px-6 py-3 border-b border-gray-200 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Last updated
-                        </th>
-                        <th className="pr-6 py-3 border-b border-gray-200 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-100">
-                      <tr>
-                        <td className="px-6 py-3 max-w-0 w-full whitespace-nowrap text-sm font-medium text-gray-900">
-                          <div className="flex items-center space-x-3 lg:pl-2">
-                            <div
-                              className="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-pink-600"
-                              aria-hidden="true"
-                            ></div>
-                            <a
-                              href="#"
-                              className="truncate hover:text-gray-600"
-                            >
-                              <span>
-                                GraphQL API
-                                <span className="text-gray-500 font-normal">
-                                  in Engineering
-                                </span>
-                              </span>
-                            </a>
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Advanced to phone screening by{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Bethany Blake
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-22">
+                                          Sep 22
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Completed phone screening with{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Martha Gardner
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-28">
+                                          Sep 28
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <span
+                                    className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                    aria-hidden="true"
+                                  ></span>
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Advanced to interview by{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Bethany Blake
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-09-30">
+                                          Sep 30
+                                        </time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className="relative pb-8">
+                                  <div className="relative flex space-x-3">
+                                    <div>
+                                      <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                        <svg
+                                          className="h-5 w-5 text-white"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 20 20"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clipRule="evenodd"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                      <div>
+                                        <p className="text-sm text-gray-500">
+                                          Completed interview with{" "}
+                                          <a
+                                            href="#"
+                                            className="font-medium text-gray-900"
+                                          >
+                                            Katherine Snyder
+                                          </a>
+                                        </p>
+                                      </div>
+                                      <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                        <time dateTime="2020-10-04">Oct 4</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
-                        </td>
-                        <td className="px-6 py-3 text-sm text-gray-500 font-medium">
-                          <div className="flex items-center space-x-2">
-                            <div className="flex flex-shrink-0 -space-x-1">
-                              <img
-                                className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                                src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt=""
-                              />
+                        </div>
+                      </div>
+                    </div>
 
-                              <img
-                                className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt=""
-                              />
-
-                              <img
-                                className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt=""
-                              />
-
-                              <img
-                                className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt=""
-                              />
-                            </div>
-
-                            <span className="flex-shrink-0 text-xs leading-5 font-medium">
-                              +8
-                            </span>
-                          </div>
-                        </td>
-                        <td className="hidden md:table-cell px-6 py-3 whitespace-nowrap text-sm text-gray-500 text-right">
-                          March 17, 2020
-                        </td>
-                        <td className="pr-6">
-                          <div className="relative flex justify-end items-center">
-                            <button
-                              id="project-options-menu-0"
-                              aria-haspopup="true"
-                              type="button"
-                              className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-                            >
-                              <span className="sr-only">Open options</span>
-                              <svg
-                                className="w-5 h-5"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                aria-hidden="true"
-                              >
-                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                              </svg>
-                            </button>
-                            <div
-                              className="mx-3 origin-top-right absolute right-7 top-0 w-48 mt-1 rounded-md shadow-lg z-10 bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200"
-                              role="menu"
-                              aria-orientation="vertical"
-                              aria-labelledby="project-options-menu-0"
-                            >
-                              <div className="py-1" role="none">
-                                <a
-                                  href="#"
-                                  className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                  role="menuitem"
-                                >
-                                  <svg
-                                    className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                                    <path
-                                      fillRule="evenodd"
-                                      d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                                      clipRule="evenodd"
-                                    />
-                                  </svg>
-                                  Edit
-                                </a>
-                                <a
-                                  href="#"
-                                  className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                  role="menuitem"
-                                >
-                                  <svg
-                                    className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" />
-                                    <path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z" />
-                                  </svg>
-                                  Duplicate
-                                </a>
-                                <a
-                                  href="#"
-                                  className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                  role="menuitem"
-                                >
-                                  <svg
-                                    className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
-                                  </svg>
-                                  Share
-                                </a>
+                    <div className="bg-white overflow-hidden shadow rounded-lg">
+                      <div className="px-4 pt-5 sm:px-6 sm:pt-6">
+                        <dt className="text-sm font-medium text-gray-500 truncate">
+                          Activity
+                        </dt>
+                      </div>
+                      <div className="px-4 py-5 sm:p-6">
+                        <div className="flex items-center">
+                          <ul className="-mb-8">
+                            <li>
+                              <div className="relative pb-8">
+                                <span
+                                  className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                  aria-hidden="true"
+                                ></span>
+                                <div className="relative flex space-x-3">
+                                  <div>
+                                    <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                                      <svg
+                                        className="h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path
+                                          fillRule="evenodd"
+                                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                          clipRule="evenodd"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                    <div>
+                                      <p className="text-sm text-gray-500">
+                                        Applied to{" "}
+                                        <a
+                                          href="#"
+                                          className="font-medium text-gray-900"
+                                        >
+                                          Front End Developer
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                      <time dateTime="2020-09-20">Sep 20</time>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div className="py-1" role="none">
-                                <a
-                                  href="#"
-                                  className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                                  role="menuitem"
-                                >
-                                  <svg
-                                    className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                  >
-                                    <path
-                                      fillRule="evenodd"
-                                      d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                      clipRule="evenodd"
-                                    />
-                                  </svg>
-                                  Delete
-                                </a>
+                            </li>
+
+                            <li>
+                              <div className="relative pb-8">
+                                <span
+                                  className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                  aria-hidden="true"
+                                ></span>
+                                <div className="relative flex space-x-3">
+                                  <div>
+                                    <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                      <svg
+                                        className="h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                    <div>
+                                      <p className="text-sm text-gray-500">
+                                        Advanced to phone screening by{" "}
+                                        <a
+                                          href="#"
+                                          className="font-medium text-gray-900"
+                                        >
+                                          Bethany Blake
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                      <time dateTime="2020-09-22">Sep 22</time>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                            </li>
+
+                            <li>
+                              <div className="relative pb-8">
+                                <span
+                                  className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                  aria-hidden="true"
+                                ></span>
+                                <div className="relative flex space-x-3">
+                                  <div>
+                                    <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                      <svg
+                                        className="h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path
+                                          fillRule="evenodd"
+                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                          clipRule="evenodd"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                    <div>
+                                      <p className="text-sm text-gray-500">
+                                        Completed phone screening with{" "}
+                                        <a
+                                          href="#"
+                                          className="font-medium text-gray-900"
+                                        >
+                                          Martha Gardner
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                      <time dateTime="2020-09-28">Sep 28</time>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="relative pb-8">
+                                <span
+                                  className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                                  aria-hidden="true"
+                                ></span>
+                                <div className="relative flex space-x-3">
+                                  <div>
+                                    <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                      <svg
+                                        className="h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                    <div>
+                                      <p className="text-sm text-gray-500">
+                                        Advanced to interview by{" "}
+                                        <a
+                                          href="#"
+                                          className="font-medium text-gray-900"
+                                        >
+                                          Bethany Blake
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                      <time dateTime="2020-09-30">Sep 30</time>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="relative pb-8">
+                                <div className="relative flex space-x-3">
+                                  <div>
+                                    <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                      <svg
+                                        className="h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path
+                                          fillRule="evenodd"
+                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                          clipRule="evenodd"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </div>
+                                  <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
+                                    <div>
+                                      <p className="text-sm text-gray-500">
+                                        Completed interview with{" "}
+                                        <a
+                                          href="#"
+                                          className="font-medium text-gray-900"
+                                        >
+                                          Katherine Snyder
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div className="text-right text-sm whitespace-nowrap text-gray-500">
+                                      <time dateTime="2020-10-04">Oct 4</time>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </dl>
                 </div>
               </div>
             </main>
