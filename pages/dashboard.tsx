@@ -25,153 +25,9 @@ const SignIn = (): JSX.Element => {
                   Home
                 </h1>
               </div>
-              <div className="mt-4 flex sm:mt-0 sm:ml-4">
-                <button
-                  type="button"
-                  className="order-1 ml-3 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-0 sm:ml-0"
-                >
-                  Share
-                </button>
-                <button
-                  type="button"
-                  className="order-0 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-1 sm:ml-3"
-                >
-                  Create
-                </button>
-              </div>
             </div>
             <div className="hidden mt-8 mx-8 sm:block">
               <div>
-                <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
-                  Pinned Projects
-                </h2>
-                <ul className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  <li className="col-span-1 flex shadow-sm rounded-md">
-                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-pink-600 text-white text-sm font-medium rounded-l-md">
-                      GA
-                    </div>
-                    <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                      <div className="flex-1 px-4 py-2 text-sm truncate">
-                        <a
-                          href="#"
-                          className="text-gray-900 font-medium hover:text-gray-600"
-                        >
-                          Graph API
-                        </a>
-                        <p className="text-gray-500">16 Members</p>
-                      </div>
-                      <div className="flex-shrink-0 pr-2">
-                        <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                          <span className="sr-only">Open options</span>
-                          <svg
-                            className="w-5 h-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li className="col-span-1 flex shadow-sm rounded-md">
-                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-purple-600 text-white text-sm font-medium rounded-l-md">
-                      CD
-                    </div>
-                    <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                      <div className="flex-1 px-4 py-2 text-sm truncate">
-                        <a
-                          href="#"
-                          className="text-gray-900 font-medium hover:text-gray-600"
-                        >
-                          Component Design
-                        </a>
-                        <p className="text-gray-500">12 Members</p>
-                      </div>
-                      <div className="flex-shrink-0 pr-2">
-                        <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                          <span className="sr-only">Open options</span>
-                          <svg
-                            className="w-5 h-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li className="col-span-1 flex shadow-sm rounded-md">
-                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
-                      T
-                    </div>
-                    <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                      <div className="flex-1 px-4 py-2 text-sm truncate">
-                        <a
-                          href="#"
-                          className="text-gray-900 font-medium hover:text-gray-600"
-                        >
-                          Templates
-                        </a>
-                        <p className="text-gray-500">16 Members</p>
-                      </div>
-                      <div className="flex-shrink-0 pr-2">
-                        <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                          <span className="sr-only">Open options</span>
-                          <svg
-                            className="w-5 h-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li className="col-span-1 flex shadow-sm rounded-md">
-                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-green-500 text-white text-sm font-medium rounded-l-md">
-                      RC
-                    </div>
-                    <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
-                      <div className="flex-1 px-4 py-2 text-sm truncate">
-                        <a
-                          href="#"
-                          className="text-gray-900 font-medium hover:text-gray-600"
-                        >
-                          React Components
-                        </a>
-                        <p className="text-gray-500">8 Members</p>
-                      </div>
-                      <div className="flex-shrink-0 pr-2">
-                        <button className="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                          <span className="sr-only">Open options</span>
-                          <svg
-                            className="w-5 h-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-4">
                 <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
                   Targets
                 </h2>
@@ -232,7 +88,7 @@ const SignIn = (): JSX.Element => {
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           {" "}
-                          View all
+                          View target
                           <span className="sr-only">
                             {" "}
                             Total Subscribers stats
@@ -298,7 +154,7 @@ const SignIn = (): JSX.Element => {
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           {" "}
-                          View all
+                          View target
                           <span className="sr-only"> Avg. Open Rate stats</span>
                         </a>
                       </div>
@@ -361,7 +217,7 @@ const SignIn = (): JSX.Element => {
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           {" "}
-                          View all
+                          View target
                           <span className="sr-only">
                             {" "}
                             Avg. Click Rate stats

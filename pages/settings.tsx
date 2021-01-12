@@ -13,7 +13,7 @@ const SignIn = (): JSX.Element => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <div className="h-screen bg-white overflow-hidden flex">
-        <Sidebar activePage={"Directory"} />
+        <Sidebar activePage={"Settings"} />
         <div className="flex-1 flex flex-col">
           <main
             className="flex-1 overflow-y-auto focus:outline-none"

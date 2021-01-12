@@ -13,7 +13,7 @@ const Home = (): JSX.Element => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <div className="h-screen flex overflow-hidden bg-white">
-        <Sidebar activePage={"Directory"} />
+        <Sidebar activePage={"Tasks"} />
         <main
           className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
           tabIndex={0}
@@ -88,10 +88,10 @@ const Home = (): JSX.Element => {
                 <thead>
                   <tr className="border-t border-gray-200">
                     <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      <span className="lg:pl-2">Task</span>
+                      <span className="lg:pl-2">Axel&apos;s Tasks</span>
                     </th>
                     <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Members
+                      Target
                     </th>
                     <th className="hidden md:table-cell px-6 py-3 border-b border-gray-200 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Last updated

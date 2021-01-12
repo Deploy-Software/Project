@@ -1,13 +1,24 @@
 import React from "react";
 import { HomeIcon, CalendarIcon } from "./Icon";
 
-type Pages = "Dashboard" | "Directory" | "Projects";
+type Pages =
+  | "Home"
+  | "Targets"
+  | "Tasks"
+  | "Chat"
+  | "Feed"
+  | "Directory"
+  | "Settings";
+
+type Projects = "Engineering" | "Human Resources" | "Customer Success";
 
 interface SidebarProps {
   activePage: Pages;
 }
 
 const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
+  const activeProject: Projects = "Engineering";
+
   return (
     <>
       <div className="lg:hidden">
@@ -95,29 +106,6 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     </svg>
                     Tasks
                   </a>
-
-                  <a
-                    href="/projects"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                  >
-                    <svg
-                      className="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                    Teams
-                  </a>
-
                   <a
                     href="/directory"
                     className="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
@@ -168,7 +156,7 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                 />
                 <div className="px-2 space-y-1">
                   <a
-                    href="#"
+                    href="/settings"
                     className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md"
                   >
                     <svg
@@ -238,22 +226,47 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                 <div className="px-2 space-y-1">
                   <a
                     href="/dashboard"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    className={
+                      activePage === "Home"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
                     <HomeIcon className="text-gray-500 mr-3 h-6 w-6" />
                     Home
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    href="/targets"
+                    className={
+                      activePage === "Targets"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
-                    <CalendarIcon className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" />
-                    Timeline
+                    <svg
+                      className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
+                    </svg>
+                    Targets
                   </a>
 
                   <a
                     href="/tasks"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    className={
+                      activePage === "Tasks"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
                     <svg
                       className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
@@ -272,8 +285,12 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     Tasks
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    href="/chat"
+                    className={
+                      activePage === "Chat"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
                     <svg
                       className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
@@ -293,7 +310,11 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                   </a>
                   <a
                     href="#"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    className={
+                      activePage === "Feed"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
                     <svg
                       className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
@@ -319,12 +340,12 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                 />
                 <div className="flex-1 px-2 space-y-1">
                   <a
+                    href="/directory"
                     className={
-                      activePage === "Projects"
-                        ? "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                        : "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                      activePage === "Directory"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     }
-                    href="/projects"
                   >
                     <svg
                       className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
@@ -341,37 +362,15 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                         d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                       />
                     </svg>
-                    Teams
-                  </a>
-
-                  <a
-                    href="/directory"
-                    className={
-                      activePage === "Directory"
-                        ? "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                        : "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                    }
-                  >
-                    <svg
-                      className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
                     Directory
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    href="/settings"
+                    className={
+                      activePage === "Settings"
+                        ? "bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                    }
                   >
                     <svg
                       className="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6"
@@ -411,7 +410,11 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                   >
                     <a
                       href="#"
-                      className="group flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                      className={
+                        activeProject === "Engineering"
+                          ? "group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-900 bg-gray-200"
+                          : "group flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                      }
                     >
                       <span
                         className="w-2.5 h-2.5 mr-4 bg-indigo-500 rounded-full"
