@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeIcon, CalendarIcon } from "./Icon";
+import { HomeIcon } from "./Icon";
 
 type Pages =
   | "Home"
