@@ -162,14 +162,14 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimaryMobileSidebarItem
-                    name={"Chat"}
-                    link={"/chat"}
-                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
-                  <PrimaryMobileSidebarItem
                     name={"Feed"}
                     link={"/feed"}
                     icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                  />
+                  <PrimaryMobileSidebarItem
+                    name={"Chat"}
+                    link={"/chat"}
+                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                 </div>
                 <hr
@@ -253,14 +253,14 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimarySidebarItem
-                    name={"Chat"}
-                    link={"/chat"}
-                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
-                  <PrimarySidebarItem
                     name={"Feed"}
                     link={"/feed"}
                     icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                  />
+                  <PrimarySidebarItem
+                    name={"Chat"}
+                    link={"/chat"}
+                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                 </div>
                 <hr

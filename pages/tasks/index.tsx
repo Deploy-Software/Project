@@ -60,7 +60,7 @@ const Home = (): JSX.Element => {
                     <span className="font-medium truncate text-sm leading-6">
                       GraphQL API
                       <span className="truncate font-normal text-gray-500">
-                        in Engineering
+                        {" in Engineering"}
                       </span>
                     </span>
                   </span>
@@ -114,7 +114,7 @@ const Home = (): JSX.Element => {
                           <span>
                             GraphQL API
                             <span className="text-gray-500 font-normal">
-                              in Engineering
+                              {" in Engineering"}
                             </span>
                           </span>
                         </a>
