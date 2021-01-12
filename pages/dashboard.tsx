@@ -14,7 +14,7 @@ const SignIn = (): JSX.Element => {
       </Head>
       <div>
         <div className="h-screen flex overflow-hidden bg-white">
-          <Sidebar activePage={"Dashboard"} />
+          <Sidebar activePage={"Home"} />
           <main
             className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
             tabIndex={0}
