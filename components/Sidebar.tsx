@@ -1,5 +1,13 @@
 import React from "react";
-import { HomeIcon, TaskIcon, DirectoryIcon, TargetsIcon, ChatIcon, FeedIcon, SettingsIcon } from "./Icon";
+import {
+  HomeIcon,
+  TaskIcon,
+  DirectoryIcon,
+  TargetsIcon,
+  ChatIcon,
+  FeedIcon,
+  SettingsIcon,
+} from "./Icon";
 
 type Pages =
   | "Home"
@@ -28,7 +36,11 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
-  const PrimarySidebarItem = ({ link, icon, name }: PrimarySidebarItemProps): JSX.Element => {
+  const PrimarySidebarItem = ({
+    link,
+    icon,
+    name,
+  }: PrimarySidebarItemProps): JSX.Element => {
     return (
       <a
         href={link}
@@ -42,9 +54,12 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
         {name}
       </a>
     );
-  }
+  };
 
-  const SecondarySidebarItem = ({ color, name }: SecondarySidebarItemProps): JSX.Element => {
+  const SecondarySidebarItem = ({
+    color,
+    name,
+  }: SecondarySidebarItemProps): JSX.Element => {
     return (
       <a
         href="#"
@@ -61,9 +76,13 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
         <span className="truncate">{name}</span>
       </a>
     );
-  }
+  };
 
-  const PrimaryMobileSidebarItem = ({ link, icon, name }: PrimarySidebarItemProps): JSX.Element => {
+  const PrimaryMobileSidebarItem = ({
+    link,
+    icon,
+    name,
+  }: PrimarySidebarItemProps): JSX.Element => {
     return (
       <a
         href={link}
@@ -77,7 +96,7 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
         {name}
       </a>
     );
-  }
+  };
 
   const activeProject: Projects = "Engineering";
 
@@ -126,28 +145,30 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
               <nav aria-label="Sidebar" className="mt-5">
                 <div className="px-2 space-y-1">
                   <PrimaryMobileSidebarItem
-                    name={'Home'}
-                    link={'/'}
+                    name={"Home"}
+                    link={"/"}
                     icon={<HomeIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimaryMobileSidebarItem
-                    name={'Targets'}
-                    link={'/targets'}
-                    icon={<TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Targets"}
+                    link={"/targets"}
+                    icon={
+                      <TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
                   <PrimaryMobileSidebarItem
-                    name={'Tasks'}
-                    link={'/tasks'}
+                    name={"Tasks"}
+                    link={"/tasks"}
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimaryMobileSidebarItem
-                    name={'Chat'}
-                    link={'/chat'}
+                    name={"Chat"}
+                    link={"/chat"}
                     icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimaryMobileSidebarItem
-                    name={'Feed'}
-                    link={'/feed'}
+                    name={"Feed"}
+                    link={"/feed"}
                     icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                 </div>
@@ -157,15 +178,19 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                 />
                 <div className="px-2 space-y-1">
                   <PrimaryMobileSidebarItem
-                    name={'Directory'}
-                    link={'/directory'}
-                    icon={<DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Directory"}
+                    link={"/directory"}
+                    icon={
+                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
 
                   <PrimaryMobileSidebarItem
-                    name={'Settings'}
-                    link={'/settings'}
-                    icon={<DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Settings"}
+                    link={"/settings"}
+                    icon={
+                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
                 </div>
               </nav>
@@ -210,29 +235,31 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
               <nav className="mt-5 flex-1" aria-label="Sidebar">
                 <div className="px-2 space-y-1">
                   <PrimarySidebarItem
-                    name={'Home'}
-                    link={'/dashboard'}
+                    name={"Home"}
+                    link={"/dashboard"}
                     icon={<HomeIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimarySidebarItem
-                    name={'Targets'}
-                    link={'/targets'}
-                    icon={<TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Targets"}
+                    link={"/targets"}
+                    icon={
+                      <TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
 
                   <PrimarySidebarItem
-                    name={'Tasks'}
-                    link={'/tasks'}
+                    name={"Tasks"}
+                    link={"/tasks"}
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimarySidebarItem
-                    name={'Chat'}
-                    link={'/chat'}
+                    name={"Chat"}
+                    link={"/chat"}
                     icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                   <PrimarySidebarItem
-                    name={'Feed'}
-                    link={'/feed'}
+                    name={"Feed"}
+                    link={"/feed"}
                     icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
                 </div>
@@ -242,14 +269,18 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                 />
                 <div className="flex-1 px-2 space-y-1">
                   <PrimarySidebarItem
-                    name={'Directory'}
-                    link={'/directory'}
-                    icon={<DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Directory"}
+                    link={"/directory"}
+                    icon={
+                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
                   <PrimarySidebarItem
-                    name={'Settings'}
-                    link={'/settings'}
-                    icon={<SettingsIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    name={"Settings"}
+                    link={"/settings"}
+                    icon={
+                      <SettingsIcon className="text-gray-500 mr-4 h-6 w-6" />
+                    }
                   />
                 </div>
                 <div className="mt-8">
@@ -265,16 +296,16 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     aria-labelledby="teams-headline"
                   >
                     <SecondarySidebarItem
-                      name={'Engineering'}
-                      color={'bg-indigo-500'}
+                      name={"Engineering"}
+                      color={"bg-indigo-500"}
                     />
                     <SecondarySidebarItem
-                      name={'Human Resources'}
-                      color={'bg-green-500'}
+                      name={"Human Resources"}
+                      color={"bg-green-500"}
                     />
                     <SecondarySidebarItem
-                      name={'Customer Success'}
-                      color={'bg-yellow-500'}
+                      name={"Customer Success"}
+                      color={"bg-yellow-500"}
                     />
                   </div>
                 </div>
