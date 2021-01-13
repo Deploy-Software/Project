@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
+import Toolbar from "../components/Toolbar";
 
 const SignIn = (): JSX.Element => {
   return (
@@ -19,13 +20,8 @@ const SignIn = (): JSX.Element => {
             className="flex-1 overflow-y-auto focus:outline-none"
             tabIndex={0}
           >
-            <div className="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
-              <div className="flex-1 min-w-0">
-                <h1 className="text-lg font-medium leading-6 text-gray-900 sm:truncate">
-                  Settings
-                </h1>
-              </div>
-            </div>
+            <Toolbar name={"Settings"} />
+
             <div className="relative max-w-4xl mx-auto md:px-8 xl:px-0">
               <div className="pb-16">
                 <div className="px-4 sm:px-6 md:px-0">

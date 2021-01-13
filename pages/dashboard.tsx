@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Toolbar from "../components/Toolbar";
 import Sidebar from "../components/Sidebar";
 
 const SignIn = (): JSX.Element => {
@@ -19,13 +20,7 @@ const SignIn = (): JSX.Element => {
             className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
             tabIndex={0}
           >
-            <div className="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
-              <div className="flex-1 min-w-0">
-                <h1 className="text-lg font-medium leading-6 text-gray-900 sm:truncate">
-                  Home
-                </h1>
-              </div>
-            </div>
+            <Toolbar name={"Home"} />
             <div className="hidden mt-8 mx-8 sm:block">
               <div>
                 <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
