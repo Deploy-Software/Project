@@ -4,8 +4,8 @@ import {
   TaskIcon,
   DirectoryIcon,
   TargetsIcon,
-  ChatIcon,
-  FeedIcon,
+  //ChatIcon,
+  //FeedIcon,
   SettingsIcon,
 } from "./Icon";
 
@@ -161,30 +161,12 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     link={"/tasks"}
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
-                  <PrimaryMobileSidebarItem
-                    name={"Feed"}
-                    link={"/feed"}
-                    icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
-                  <PrimaryMobileSidebarItem
-                    name={"Chat"}
-                    link={"/chat"}
-                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
                 </div>
                 <hr
                   className="border-t border-gray-200 my-5"
                   aria-hidden="true"
                 />
                 <div className="px-2 space-y-1">
-                  <PrimaryMobileSidebarItem
-                    name={"Directory"}
-                    link={"/directory"}
-                    icon={
-                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
-                    }
-                  />
-
                   <PrimaryMobileSidebarItem
                     name={"Settings"}
                     link={"/settings"}
@@ -252,29 +234,12 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     link={"/tasks"}
                     icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                   />
-                  <PrimarySidebarItem
-                    name={"Feed"}
-                    link={"/feed"}
-                    icon={<FeedIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
-                  <PrimarySidebarItem
-                    name={"Chat"}
-                    link={"/chat"}
-                    icon={<ChatIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
                 </div>
                 <hr
                   className="border-t border-gray-200 my-5"
                   aria-hidden="true"
                 />
                 <div className="flex-1 px-2 space-y-1">
-                  <PrimarySidebarItem
-                    name={"Directory"}
-                    link={"/directory"}
-                    icon={
-                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
-                    }
-                  />
                   <PrimarySidebarItem
                     name={"Settings"}
                     link={"/settings"}
@@ -296,16 +261,8 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                     aria-labelledby="teams-headline"
                   >
                     <SecondarySidebarItem
-                      name={"Engineering"}
+                      name={"Padelboard"}
                       color={"bg-indigo-500"}
-                    />
-                    <SecondarySidebarItem
-                      name={"Human Resources"}
-                      color={"bg-green-500"}
-                    />
-                    <SecondarySidebarItem
-                      name={"Customer Success"}
-                      color={"bg-yellow-500"}
                     />
                   </div>
                 </div>

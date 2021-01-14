@@ -106,6 +106,7 @@ interface TaskListCardProps {
   action: string;
   target: string;
   status: TaskStatus;
+  lastOne: boolean;
   date: string;
 }
 
@@ -113,15 +114,18 @@ const TaskListCard = ({
   action,
   target,
   status,
+  lastOne,
   date,
 }: TaskListCardProps): JSX.Element => {
   return (
     <li>
       <div className="relative pb-8">
-        <span
-          className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
-          aria-hidden="true"
-        ></span>
+        {!lastOne && (
+          <span
+            className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+            aria-hidden="true"
+          ></span>
+        )}
         <div className="relative flex space-x-3">
           {status === "In Progress" && (
             <div>
@@ -166,7 +170,7 @@ const TaskListCard = ({
   );
 };
 
-interface FeedListCardProps {
+/*interface FeedListCardProps {
   action: string;
   target: string;
   image: string;
@@ -211,7 +215,7 @@ const FeedListCard = ({
       </div>
     </li>
   );
-};
+};*/
 
 const Home = (): JSX.Element => {
   return (
@@ -274,105 +278,35 @@ const Home = (): JSX.Element => {
                       target={"Front End Developer"}
                       date={"Sep 20"}
                       status={"In Progress"}
+                      lastOne={false}
                     />
                     <TaskListCard
                       action={"Advanced to phone screening by"}
                       target={"Bethany Blake"}
                       date={"Sep 22"}
                       status={"Finished"}
+                      lastOne={false}
                     />
                     <TaskListCard
                       action={"Completed phone screening with"}
                       target={"Martha Gardner"}
                       date={"Sep 28"}
                       status={"Finished"}
+                      lastOne={false}
                     />
                     <TaskListCard
                       action={"Advanced to interview by"}
                       target={"Bethany Blake"}
                       date={"Sep 30"}
                       status={"In Progress"}
+                      lastOne={false}
                     />
                     <TaskListCard
                       action={"Completed interview with"}
                       target={"Katherine Snyder"}
                       date={"Oct 4"}
                       status={"Finished"}
-                    />
-                  </ListCard>
-
-                  <ListCard title={"Feed"}>
-                    <FeedListCard
-                      action={"Applied to"}
-                      target={"Front End Developer"}
-                      date={"Sep 20"}
-                      image={
-                        "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      }
-                    />
-                    <FeedListCard
-                      action={"Advanced to phone screening by"}
-                      target={"Bethany Blake"}
-                      date={"Sep 22"}
-                      image={
-                        "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      }
-                    />
-                    <FeedListCard
-                      action={"Completed phone screening with"}
-                      target={"Martha Gardner"}
-                      date={"Sep 28"}
-                      image={
-                        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                      }
-                    />
-                    <FeedListCard
-                      action={"Advanced to interview by"}
-                      target={"Bethany Blake"}
-                      date={"Sep 30"}
-                      image={
-                        "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      }
-                    />
-                    <FeedListCard
-                      action={"Completed interview with"}
-                      target={"Katherine Snyder"}
-                      date={"Oct 4"}
-                      image={
-                        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      }
-                    />
-                  </ListCard>
-                  <ListCard title={"Activity"}>
-                    <TaskListCard
-                      action={"Applied to"}
-                      target={"Front End Developer"}
-                      date={"Sep 20"}
-                      status={"In Progress"}
-                    />
-                    <TaskListCard
-                      action={"Advanced to phone screening by"}
-                      target={"Bethany Blake"}
-                      date={"Sep 22"}
-                      status={"Finished"}
-                    />
-                    <TaskListCard
-                      action={"Completed phone screening with"}
-                      target={"Martha Gardner"}
-                      date={"Sep 28"}
-                      status={"Finished"}
-                    />
-                    <TaskListCard
-                      action={"Advanced to interview by"}
-                      target={"Bethany Blake"}
-                      date={"Sep 30"}
-                      status={"In Progress"}
-                    />
-                    <TaskListCard
-                      action={"Completed interview with"}
-                      target={"Katherine Snyder"}
-                      date={"Oct 4"}
-                      status={"Finished"}
+                      lastOne={true}
                     />
                   </ListCard>
                 </dl>

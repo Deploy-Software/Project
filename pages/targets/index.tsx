@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Sidebar from "../components/Sidebar";
-import Toolbar from "../components/Toolbar";
+import Sidebar from "../../components/Sidebar";
+import Toolbar from "../../components/Toolbar";
 
 const Targets = (): JSX.Element => {
   return (
@@ -274,7 +274,7 @@ const Targets = (): JSX.Element => {
                       <div className="bg-gray-50 px-4 py-4 sm:px-6">
                         <div className="text-sm">
                           <a
-                            href="#"
+                            href="/targets/1"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
                             {" "}
@@ -536,7 +536,7 @@ const Targets = (): JSX.Element => {
                       <div className="bg-gray-50 px-4 py-4 sm:px-6">
                         <div className="text-sm">
                           <a
-                            href="#"
+                            href="/targets/2"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
                             {" "}
@@ -799,7 +799,7 @@ const Targets = (): JSX.Element => {
                     <div className="bg-gray-50 px-4 py-4 sm:px-6">
                       <div className="text-sm">
                         <a
-                          href="#"
+                          href="/targets/3"
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           {" "}

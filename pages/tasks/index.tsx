@@ -70,7 +70,7 @@ const Home = (): JSX.Element => {
                     <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       <span className="lg:pl-2">Axel&apos;s Tasks</span>
                     </th>
-                    <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-16 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Target
                     </th>
                     <th className="hidden md:table-cell px-6 py-3 border-b border-gray-200 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -100,38 +100,8 @@ const Home = (): JSX.Element => {
                         </a>
                       </div>
                     </td>
-                    <td className="px-6 py-3 text-sm text-gray-500 font-medium">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex flex-shrink-0 -space-x-1">
-                          <img
-                            className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                            src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-
-                          <img
-                            className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                            src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-
-                          <img
-                            className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                            src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-
-                          <img
-                            className="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-                        </div>
-
-                        <span className="flex-shrink-0 text-xs leading-5 font-medium">
-                          +8
-                        </span>
-                      </div>
+                    <td className="hidden md:table-cell px-16 py-3 whitespace-nowrap text-sm text-gray-500 text-right">
+                      Total subscribers
                     </td>
                     <td className="hidden md:table-cell px-6 py-3 whitespace-nowrap text-sm text-gray-500 text-right">
                       March 17, 2020
