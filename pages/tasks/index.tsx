@@ -38,9 +38,9 @@ const Home = (): JSX.Element => {
                       aria-hidden="true"
                     ></span>
                     <span className="font-medium truncate text-sm leading-6">
-                      GraphQL API
+                      Translate app
                       <span className="truncate font-normal text-gray-500">
-                        {" in Engineering"}
+                        {" in Get more new users"}
                       </span>
                     </span>
                   </span>
@@ -92,9 +92,9 @@ const Home = (): JSX.Element => {
                           className="truncate hover:text-gray-600"
                         >
                           <span>
-                            GraphQL API
+                            Translate app
                             <span className="text-gray-500 font-normal">
-                              {" in Engineering"}
+                              {" in Get more new users"}
                             </span>
                           </span>
                         </a>

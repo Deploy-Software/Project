@@ -63,7 +63,7 @@ const StatisticCard = ({
       <div className="bg-gray-50 px-4 py-4 sm:px-6">
         <div className="text-sm">
           <a
-            href="#"
+            href="/targets/1"
             className="font-medium text-indigo-600 hover:text-indigo-500"
           >
             {" "}

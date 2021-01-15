@@ -18,7 +18,7 @@ type Pages =
   | "Directory"
   | "Settings";
 
-type Projects = "Engineering" | "Human Resources" | "Customer Success";
+type Projects = "Padelboard";
 
 interface PrimarySidebarItemProps {
   icon: JSX.Element;
@@ -98,110 +98,109 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
     );
   };
 
-  const activeProject: Projects = "Engineering";
+  const activeProject: Projects = "Padelboard";
 
   return (
     <>
-      <div className="lg:hidden">
-        <div className="fixed inset-0 flex z-40">
-          <div className="fixed inset-0">
-            <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-          </div>
-          <div
-            tabIndex={0}
-            className="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none"
-          >
-            <div className="absolute top-0 right-0 -mr-12 pt-2">
-              <button
-                type="button"
-                className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              >
-                <span className="sr-only">Close sidebar</span>
-                <svg
-                  className="h-6 w-6 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
+      {false && (
+        <div className="lg:hidden">
+          <div className="fixed inset-0 flex z-40">
+            <div className="fixed inset-0">
+              <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
+            </div>
+            <div
+              tabIndex={0}
+              className="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none"
+            >
+              <div className="absolute top-0 right-0 -mr-12 pt-2">
+                <button
+                  type="button"
+                  className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-              <div className="flex-shrink-0 flex items-center px-4">
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-pink-500-mark-gray-900-text.svg"
-                  alt="Workflow"
-                />
+                  <span className="sr-only">Close sidebar</span>
+                  <svg
+                    className="h-6 w-6 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
-              <nav aria-label="Sidebar" className="mt-5">
-                <div className="px-2 space-y-1">
-                  <PrimaryMobileSidebarItem
-                    name={"Home"}
-                    link={"/"}
-                    icon={<HomeIcon className="text-gray-500 mr-4 h-6 w-6" />}
-                  />
-                  <PrimaryMobileSidebarItem
-                    name={"Targets"}
-                    link={"/targets"}
-                    icon={
-                      <TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />
-                    }
-                  />
-                  <PrimaryMobileSidebarItem
-                    name={"Tasks"}
-                    link={"/tasks"}
-                    icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
+              <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+                <div className="flex-shrink-0 flex items-center px-4">
+                  <img
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-logo-pink-500-mark-gray-900-text.svg"
+                    alt="Workflow"
                   />
                 </div>
-                <hr
-                  className="border-t border-gray-200 my-5"
-                  aria-hidden="true"
-                />
-                <div className="px-2 space-y-1">
-                  <PrimaryMobileSidebarItem
-                    name={"Settings"}
-                    link={"/settings"}
-                    icon={
-                      <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
-                    }
-                  />
-                </div>
-              </nav>
-            </div>
-            <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-              <a href="#" className="flex-shrink-0 group block">
-                <div className="flex items-center">
-                  <div>
-                    <img
-                      className="inline-block h-10 w-10 rounded-full"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
+                <nav aria-label="Sidebar" className="mt-5">
+                  <div className="px-2 space-y-1">
+                    <PrimaryMobileSidebarItem
+                      name={"Home"}
+                      link={"/"}
+                      icon={<HomeIcon className="text-gray-500 mr-4 h-6 w-6" />}
+                    />
+                    <PrimaryMobileSidebarItem
+                      name={"Targets"}
+                      link={"/targets"}
+                      icon={
+                        <TargetsIcon className="text-gray-500 mr-4 h-6 w-6" />
+                      }
+                    />
+                    <PrimaryMobileSidebarItem
+                      name={"Tasks"}
+                      link={"/tasks"}
+                      icon={<TaskIcon className="text-gray-500 mr-4 h-6 w-6" />}
                     />
                   </div>
-                  <div className="ml-3">
-                    <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                      Tom Cook
-                    </p>
-                    <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                      View profile
-                    </p>
+                  <hr
+                    className="border-t border-gray-200 my-5"
+                    aria-hidden="true"
+                  />
+                  <div className="px-2 space-y-1">
+                    <PrimaryMobileSidebarItem
+                      name={"Settings"}
+                      link={"/settings"}
+                      icon={
+                        <DirectoryIcon className="text-gray-500 mr-4 h-6 w-6" />
+                      }
+                    />
                   </div>
-                </div>
-              </a>
+                </nav>
+              </div>
+              <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
+                <a href="#" className="flex-shrink-0 group block">
+                  <div className="flex items-center">
+                    <div>
+                      <img
+                        className="inline-block h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">
+                        Tom Cook
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
+            <div className="flex-shrink-0 w-14" aria-hidden="true"></div>
           </div>
-          <div className="flex-shrink-0 w-14" aria-hidden="true"></div>
         </div>
-      </div>
+      )}
 
       <div className="hidden lg:flex lg:flex-shrink-0">
         <div className="flex flex-col w-64">
@@ -281,9 +280,6 @@ const Sidebar = ({ activePage }: SidebarProps): JSX.Element => {
                   <div className="ml-3">
                     <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
                       Tom Cook
-                    </p>
-                    <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                      View profile
                     </p>
                   </div>
                 </div>

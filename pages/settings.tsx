@@ -36,16 +36,6 @@ const SignIn = (): JSX.Element => {
                         className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm rounded-md"
                       >
                         <option selected>General</option>
-
-                        <option>Password</option>
-
-                        <option>Notifications</option>
-
-                        <option>Plan</option>
-
-                        <option>Billing</option>
-
-                        <option>Team Members</option>
                       </select>
                     </div>
                     <div className="hidden lg:block">
@@ -56,41 +46,6 @@ const SignIn = (): JSX.Element => {
                             className="border-purple-500 text-purple-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
                           >
                             General
-                          </a>
-
-                          <a
-                            href="#"
-                            className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm"
-                          >
-                            Password
-                          </a>
-
-                          <a
-                            href="#"
-                            className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm"
-                          >
-                            Notifications
-                          </a>
-
-                          <a
-                            href="#"
-                            className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm"
-                          >
-                            Plan
-                          </a>
-
-                          <a
-                            href="#"
-                            className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm"
-                          >
-                            Billing
-                          </a>
-
-                          <a
-                            href="#"
-                            className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm"
-                          >
-                            Team Members
                           </a>
                         </nav>
                       </div>

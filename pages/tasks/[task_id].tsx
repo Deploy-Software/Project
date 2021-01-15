@@ -95,7 +95,7 @@ const SignIn = (): JSX.Element => {
                           aria-current="page"
                           className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
                         >
-                          Applicants
+                          Get more new users
                         </a>
                       </div>
                     </li>
@@ -117,16 +117,15 @@ const SignIn = (): JSX.Element => {
                       <div className="md:flex md:items-center md:justify-between md:space-x-4 xl:border-b xl:pb-6">
                         <div>
                           <h1 className="text-2xl font-bold text-gray-900">
-                            ARIA attribute misspelled
+                            Translate app
                           </h1>
                           <p className="mt-2 text-sm text-gray-500">
-                            #400 opened by
-                            <a href="#" className="font-medium text-gray-900">
-                              Hilary Mahy
-                            </a>
-                            in
-                            <a href="#" className="font-medium text-gray-900">
-                              Customer Portal
+                            {"Created by "}
+                            <a
+                              href="#"
+                              className="font-medium text-gray-700 hover:text-gray-900"
+                            >
+                              Axel Nilsson
                             </a>
                           </p>
                         </div>
@@ -237,7 +236,7 @@ const SignIn = (): JSX.Element => {
                                     />
                                   </div>
                                   <div className="text-sm font-medium text-gray-900">
-                                    Eduardo Benz
+                                    Axel Nilsson
                                   </div>
                                 </a>
                               </li>
@@ -248,22 +247,6 @@ const SignIn = (): JSX.Element => {
                               Tags
                             </h2>
                             <ul className="mt-2 leading-8">
-                              <li className="inline">
-                                <a
-                                  href="#"
-                                  className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5"
-                                >
-                                  <div className="absolute flex-shrink-0 flex items-center justify-center">
-                                    <span
-                                      className="h-1.5 w-1.5 rounded-full bg-rose-500"
-                                      aria-hidden="true"
-                                    ></span>
-                                  </div>
-                                  <div className="ml-3.5 text-sm font-medium text-gray-900">
-                                    Bug
-                                  </div>
-                                </a>
-                              </li>
                               <li className="inline">
                                 <a
                                   href="#"
@@ -288,29 +271,9 @@ const SignIn = (): JSX.Element => {
                         <h2 className="sr-only">Description</h2>
                         <div className="prose max-w-none">
                           <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Expedita, hic? Commodi cumque similique id
-                            tempora molestiae deserunt at suscipit, dolor
-                            voluptatem, numquam, harum consequatur laboriosam
-                            voluptas tempore aut voluptatum alias?
+                            We want to translate Padelboard to more languages to
+                            reach more people.{" "}
                           </p>
-                          <ul>
-                            <li>
-                              Tempor ultrices proin nunc fames nunc ut auctor
-                              vitae sed. Eget massa parturient vulputate
-                              fermentum id facilisis nam pharetra. Aliquet leo
-                              tellus.
-                            </li>
-                            <li>
-                              Turpis ac nunc adipiscing adipiscing metus
-                              tincidunt senectus tellus.
-                            </li>
-                            <li>
-                              Semper interdum porta sit tincidunt. Dui
-                              suspendisse scelerisque amet metus eget sed. Ut
-                              tellus in sed dignissim.
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -369,7 +332,7 @@ const SignIn = (): JSX.Element => {
                                             href="#"
                                             className="font-medium text-gray-900"
                                           >
-                                            Eduardo Benz
+                                            Bengt Thorn
                                           </a>
                                         </div>
                                         <p className="mt-0.5 text-sm text-gray-500">
@@ -378,11 +341,8 @@ const SignIn = (): JSX.Element => {
                                       </div>
                                       <div className="mt-2 text-sm text-gray-700">
                                         <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipiscing elit. Tincidunt
-                                          nunc ipsum tempor purus vitae id.
-                                          Morbi in vestibulum nec varius. Et
-                                          diam cursus quis sed purus nam.
+                                          Which languages are we starting off
+                                          with?
                                         </p>
                                       </div>
                                     </div>
@@ -422,14 +382,14 @@ const SignIn = (): JSX.Element => {
                                           href="#"
                                           className="font-medium text-gray-900"
                                         >
-                                          Hilary Mahy
+                                          {"Axel Nilsson "}
                                         </a>
                                         assigned
                                         <a
                                           href="#"
                                           className="font-medium text-gray-900"
                                         >
-                                          Kristin Watson
+                                          {" Axel Nilsson "}
                                         </a>
                                         <span className="whitespace-nowrap">
                                           2d ago
@@ -473,26 +433,11 @@ const SignIn = (): JSX.Element => {
                                             href="#"
                                             className="font-medium text-gray-900"
                                           >
-                                            Hilary Mahy
+                                            {"Axel Nilsson "}
                                           </a>
-                                          added tags
+                                          {"added tag "}
                                         </span>
                                         <span className="mr-0.5">
-                                          <a
-                                            href="#"
-                                            className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm"
-                                          >
-                                            <span className="absolute flex-shrink-0 flex items-center justify-center">
-                                              <span
-                                                className="h-1.5 w-1.5 rounded-full bg-rose-500"
-                                                aria-hidden="true"
-                                              ></span>
-                                            </span>
-                                            <span className="ml-3.5 font-medium text-gray-900">
-                                              Bug
-                                            </span>
-                                          </a>
-
                                           <a
                                             href="#"
                                             className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm"
@@ -509,7 +454,7 @@ const SignIn = (): JSX.Element => {
                                           </a>
                                         </span>
                                         <span className="whitespace-nowrap">
-                                          6h ago
+                                          {" 6h ago"}
                                         </span>
                                       </div>
                                     </div>
@@ -550,7 +495,7 @@ const SignIn = (): JSX.Element => {
                                             href="#"
                                             className="font-medium text-gray-900"
                                           >
-                                            Jason Meyers
+                                            Robin Lundgren
                                           </a>
                                         </div>
                                         <p className="mt-0.5 text-sm text-gray-500">
@@ -559,14 +504,8 @@ const SignIn = (): JSX.Element => {
                                       </div>
                                       <div className="mt-2 text-sm text-gray-700">
                                         <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipiscing elit. Tincidunt
-                                          nunc ipsum tempor purus vitae id.
-                                          Morbi in vestibulum nec varius. Et
-                                          diam cursus quis sed purus nam.
-                                          Scelerisque amet elit non sit ut
-                                          tincidunt condimentum. Nisl ultrices
-                                          eu venenatis diam.
+                                          Let&apos;s start off with Spanish and
+                                          English.
                                         </p>
                                       </div>
                                     </div>
@@ -726,7 +665,7 @@ const SignIn = (): JSX.Element => {
                               />
                             </div>
                             <div className="text-sm font-medium text-gray-900">
-                              Eduardo Benz
+                              Axel Nilsson
                             </div>
                           </a>
                         </li>
@@ -737,22 +676,6 @@ const SignIn = (): JSX.Element => {
                         Tags
                       </h2>
                       <ul className="mt-2 leading-8">
-                        <li className="inline">
-                          <a
-                            href="#"
-                            className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5"
-                          >
-                            <div className="absolute flex-shrink-0 flex items-center justify-center">
-                              <span
-                                className="h-1.5 w-1.5 rounded-full bg-rose-500"
-                                aria-hidden="true"
-                              ></span>
-                            </div>
-                            <div className="ml-3.5 text-sm font-medium text-gray-900">
-                              Bug
-                            </div>
-                          </a>
-                        </li>
                         <li className="inline">
                           <a
                             href="#"

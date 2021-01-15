@@ -20,7 +20,13 @@ const Targets = (): JSX.Element => {
             className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
             tabIndex={0}
           >
-            <Toolbar name={"Targets"} />
+            <Toolbar
+              name={"Targets"}
+              primaryButtonName={"New target"}
+              primaryButtonAction={() => {
+                alert("heyo");
+              }}
+            />
             <div className="hidden mt-8 mx-8 sm:block">
               <div>
                 <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
