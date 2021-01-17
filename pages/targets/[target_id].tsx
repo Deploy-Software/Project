@@ -167,15 +167,6 @@ const Targets = (): JSX.Element => {
                                       <span className="text-gray-500 font-medium">
                                         4d ago
                                       </span>
-                                      <span className="text-gray-500 font-medium">
-                                        &middot;
-                                      </span>
-                                      <button
-                                        type="button"
-                                        className="text-gray-900 font-medium"
-                                      >
-                                        Reply
-                                      </button>
                                     </div>
                                   </div>
                                 </div>
@@ -212,15 +203,6 @@ const Targets = (): JSX.Element => {
                                       <span className="text-gray-500 font-medium">
                                         4d ago
                                       </span>
-                                      <span className="text-gray-500 font-medium">
-                                        &middot;
-                                      </span>
-                                      <button
-                                        type="button"
-                                        className="text-gray-900 font-medium"
-                                      >
-                                        Reply
-                                      </button>
                                     </div>
                                   </div>
                                 </div>
@@ -257,15 +239,6 @@ const Targets = (): JSX.Element => {
                                       <span className="text-gray-500 font-medium">
                                         4d ago
                                       </span>
-                                      <span className="text-gray-500 font-medium">
-                                        &middot;
-                                      </span>
-                                      <button
-                                        type="button"
-                                        className="text-gray-900 font-medium"
-                                      >
-                                        Reply
-                                      </button>
                                     </div>
                                   </div>
                                 </div>
@@ -325,7 +298,7 @@ const Targets = (): JSX.Element => {
                         id="timeline-title"
                         className="text-lg font-medium text-gray-900"
                       >
-                        Timeline
+                        Activity
                       </h2>
 
                       <div className="mt-6 flow-root">

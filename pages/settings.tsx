@@ -208,50 +208,6 @@ const SignIn = (): JSX.Element => {
                               </span>
                             </dd>
                           </div>
-                          <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:pt-5">
-                            <dt
-                              id="timezone-option-label"
-                              className="text-sm font-medium text-gray-500"
-                            >
-                              Automatic timezone
-                            </dt>
-                            <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                              <button
-                                type="button"
-                                aria-pressed="true"
-                                aria-labelledby="timezone-option-label"
-                                className="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-auto"
-                              >
-                                <span className="sr-only">Use setting</span>
-                                <span
-                                  aria-hidden="true"
-                                  className="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-                                ></span>
-                              </button>
-                            </dd>
-                          </div>
-                          <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-b sm:border-gray-200">
-                            <dt
-                              id="auto-update-option-label"
-                              className="text-sm font-medium text-gray-500"
-                            >
-                              Auto-update applicant data
-                            </dt>
-                            <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                              <button
-                                type="button"
-                                aria-pressed="false"
-                                aria-labelledby="auto-update-option-label"
-                                className="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-auto"
-                              >
-                                <span className="sr-only">Use setting</span>
-                                <span
-                                  aria-hidden="true"
-                                  className="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-                                ></span>
-                              </button>
-                            </dd>
-                          </div>
                         </dl>
                       </div>
                     </div>

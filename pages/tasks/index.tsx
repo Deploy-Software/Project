@@ -39,9 +39,6 @@ const Home = (): JSX.Element => {
                     ></span>
                     <span className="font-medium truncate text-sm leading-6">
                       Translate app
-                      <span className="truncate font-normal text-gray-500">
-                        {" in Get more new users"}
-                      </span>
                     </span>
                   </span>
                   <svg
@@ -91,12 +88,7 @@ const Home = (): JSX.Element => {
                           href="/tasks/1"
                           className="truncate hover:text-gray-600"
                         >
-                          <span>
-                            Translate app
-                            <span className="text-gray-500 font-normal">
-                              {" in Get more new users"}
-                            </span>
-                          </span>
+                          <span>Translate app</span>
                         </a>
                       </div>
                     </td>
