@@ -1,33 +1,19 @@
-use crate::store::Store;
-use crate::views::nav_bar_view::ActivePage;
-use crate::views::nav_bar_view::NavBarView;
-use crate::Msg;
+use crate::views::sidebar::ActivePage;
+use crate::views::sidebar::SidebarView;
 
 use virtual_dom_rs::prelude::*;
 
-use std::cell::RefCell;
-use std::rc::Rc;
-
-pub struct HomeView {
-    store: Rc<RefCell<Store>>,
-}
+pub struct HomeView {}
 
 impl HomeView {
-    pub fn new(store: Rc<RefCell<Store>>) -> HomeView {
-        HomeView { store }
+    pub fn new() -> HomeView {
+        HomeView {}
     }
 }
 
 impl View for HomeView {
     fn render(&self) -> VirtualNode {
-        let nav_bar = NavBarView::new(ActivePage::Home).render();
-
-        let store = Rc::clone(&self.store);
-
-        let click_count = self.store.borrow().click_count();
-        let click_count = &*click_count.to_string();
-
-        let click_component = html! { <strong style="font-size: 30px">{ click_count }</strong> };
+        let nav_bar = SidebarView::new(ActivePage::Home).render();
 
         html! {
         <div>

@@ -1,18 +1,19 @@
 use virtual_dom_rs::prelude::*;
 
-mod nav_bar_item_view;
-use self::nav_bar_item_view::NavBarItemView;
+mod sidebar_item_view;
+use self::sidebar_item_view::SidebarItemView;
 
-pub struct NavBarView {
+pub struct SidebarView {
     active_page: ActivePage,
 }
 
-impl NavBarView {
-    pub fn new(active_page: ActivePage) -> NavBarView {
-        NavBarView { active_page }
+impl SidebarView {
+    pub fn new(active_page: ActivePage) -> SidebarView {
+        SidebarView { active_page }
     }
 }
 
+#[derive(PartialEq)]
 pub enum ActivePage {
     Home,
     Contributors,
@@ -21,12 +22,20 @@ pub enum ActivePage {
     Settings,
 }
 
-impl View for NavBarView {
+impl View for SidebarView {
     fn render(&self) -> VirtualNode {
-        let home = NavBarItemView::new("/", "Home");
-        let targets = NavBarItemView::new("/targets", "Targets");
-        let tasks = NavBarItemView::new("/tasks", "Tasks");
-        let settings = NavBarItemView::new("/settings", "Settings");
+        let home = SidebarItemView::new("/", "Home", self.active_page == ActivePage::Home);
+        let targets = SidebarItemView::new(
+            "/targets",
+            "Targets",
+            self.active_page == ActivePage::Targets,
+        );
+        let tasks = SidebarItemView::new("/tasks", "Tasks", self.active_page == ActivePage::Tasks);
+        let settings = SidebarItemView::new(
+            "/settings",
+            "Settings",
+            self.active_page == ActivePage::Settings,
+        );
 
         html! {
         <div class="hidden lg:flex lg:flex-shrink-0">

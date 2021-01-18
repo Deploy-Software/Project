@@ -65,8 +65,8 @@ impl App {
 }
 
 #[route(path = "/")]
-fn home_route(store: Provided<Rc<RefCell<Store>>>) -> VirtualNode {
-    HomeView::new(Rc::clone(&store)).render()
+fn home_route() -> VirtualNode {
+    HomeView::new().render()
 }
 
 // @book start on-visit-example
@@ -93,7 +93,7 @@ fn download_contributors_json(store: Provided<Rc<RefCell<Store>>>) {
             let store = Rc::clone(&store);
             let callback = Closure::wrap(Box::new(move |json: JsValue| {
                 store.borrow_mut().msg(&Msg::SetContributorsJson(json));
-            }) as Box<FnMut(JsValue)>);
+            }) as Box<dyn FnMut(JsValue)>);
             download_json(
                 "https://api.github.com/repos/chinedufn/percy/contributors",
                 callback.as_ref().unchecked_ref(),
@@ -102,7 +102,7 @@ fn download_contributors_json(store: Provided<Rc<RefCell<Store>>>) {
             // TODO: Store and drop the callback instead of leaking memory.
             callback.forget();
         }
-    }) as Box<FnMut()>);
+    }) as Box<dyn FnMut()>);
 
     web_sys::window()
         .unwrap()

@@ -1,6 +1,6 @@
 use crate::store::Store;
-use crate::views::nav_bar_view::ActivePage;
-use crate::views::nav_bar_view::NavBarView;
+use crate::views::sidebar::ActivePage;
+use crate::views::sidebar::SidebarView;
 use std::cell::RefCell;
 use std::rc::Rc;
 use virtual_dom_rs::prelude::*;
@@ -17,7 +17,7 @@ impl ContributorsView {
 
 impl View for ContributorsView {
     fn render(&self) -> VirtualNode {
-        let nav_bar = NavBarView::new(ActivePage::Contributors).render();
+        let nav_bar = SidebarView::new(ActivePage::Contributors).render();
 
         let store = self.store.borrow();
         let contributors = store.contributors().to_owned();
