@@ -60,7 +60,11 @@ impl App {
 
 impl App {
     pub fn render(&self) -> VirtualNode {
-        self.router.view(self.store.borrow().path()).unwrap()
+        println!("{}", self.store.borrow().path());
+        match self.router.view(self.store.borrow().path()) {
+            Some(route) => route,
+            None => NotFoundView::new().render(),
+        }
     }
 }
 
@@ -71,12 +75,31 @@ fn home_route() -> VirtualNode {
 
 // @book start on-visit-example
 
+#[route(path = "/initial")]
+fn initial_route() -> VirtualNode {
+    InitialView::new().render()
+}
+
+#[route(path = "/sign_in")]
+fn sign_in_route() -> VirtualNode {
+    SignInView::new().render()
+}
+
 #[route(
   path = "/targets",
   on_visit = download_contributors_json
 )]
 fn targets_route(store: Provided<Rc<RefCell<Store>>>) -> VirtualNode {
     TargetsView::new(Rc::clone(&store)).render()
+}
+
+#[route(path = "/target/:id")]
+fn target_route(id: u64) -> VirtualNode {
+    let id = format!("{}", id);
+
+    html! {
+        <div> User { id } </div>
+    }
 }
 
 #[route(path = "/tasks")]
@@ -134,24 +157,13 @@ fn make_router(store: Rc<RefCell<Store>>) -> Rc<Router> {
 
     router.set_route_handlers(create_routes![
         home_route,
+        initial_route,
+        sign_in_route,
         targets_route,
+        target_route,
         tasks_route,
         settings_route
     ]);
 
     Rc::new(router)
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn click_msg() {
-        let app = App::new(5, "/".to_string());
-
-        assert_eq!(app.store.borrow().click_count(), 5);
-        app.store.borrow_mut().msg(&Msg::Click);
-        assert_eq!(app.store.borrow().click_count(), 6);
-    }
 }
