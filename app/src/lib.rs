@@ -72,11 +72,21 @@ fn home_route() -> VirtualNode {
 // @book start on-visit-example
 
 #[route(
-  path = "/contributors",
+  path = "/targets",
   on_visit = download_contributors_json
 )]
-fn contributors_route(store: Provided<Rc<RefCell<Store>>>) -> VirtualNode {
-    ContributorsView::new(Rc::clone(&store)).render()
+fn targets_route(store: Provided<Rc<RefCell<Store>>>) -> VirtualNode {
+    TargetsView::new(Rc::clone(&store)).render()
+}
+
+#[route(path = "/tasks")]
+fn tasks_route() -> VirtualNode {
+    TasksView::new().render()
+}
+
+#[route(path = "/settings")]
+fn settings_route() -> VirtualNode {
+    SettingsView::new().render()
 }
 
 fn download_contributors_json(store: Provided<Rc<RefCell<Store>>>) {
@@ -122,7 +132,12 @@ fn make_router(store: Rc<RefCell<Store>>) -> Rc<Router> {
 
     router.provide(store);
 
-    router.set_route_handlers(create_routes![home_route, contributors_route]);
+    router.set_route_handlers(create_routes![
+        home_route,
+        targets_route,
+        tasks_route,
+        settings_route
+    ]);
 
     Rc::new(router)
 }

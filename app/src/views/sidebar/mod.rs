@@ -1,22 +1,21 @@
 use virtual_dom_rs::prelude::*;
 
 mod sidebar_item_view;
-use self::sidebar_item_view::SidebarItemView;
+use self::sidebar_item_view::{PrimarySidebarItemView, SecondarySidebarItemView};
 
 pub struct SidebarView {
-    active_page: ActivePage,
+    active_page: Pages,
 }
 
 impl SidebarView {
-    pub fn new(active_page: ActivePage) -> SidebarView {
+    pub fn new(active_page: Pages) -> SidebarView {
         SidebarView { active_page }
     }
 }
 
 #[derive(PartialEq)]
-pub enum ActivePage {
+pub enum Pages {
     Home,
-    Contributors,
     Targets,
     Tasks,
     Settings,
@@ -24,17 +23,32 @@ pub enum ActivePage {
 
 impl View for SidebarView {
     fn render(&self) -> VirtualNode {
-        let home = SidebarItemView::new("/", "Home", self.active_page == ActivePage::Home);
-        let targets = SidebarItemView::new(
+        let home =
+            PrimarySidebarItemView::new("/", "Home", Pages::Home, self.active_page == Pages::Home);
+        let targets = PrimarySidebarItemView::new(
             "/targets",
             "Targets",
-            self.active_page == ActivePage::Targets,
+            Pages::Targets,
+            self.active_page == Pages::Targets,
         );
-        let tasks = SidebarItemView::new("/tasks", "Tasks", self.active_page == ActivePage::Tasks);
-        let settings = SidebarItemView::new(
+        let tasks = PrimarySidebarItemView::new(
+            "/tasks",
+            "Tasks",
+            Pages::Tasks,
+            self.active_page == Pages::Tasks,
+        );
+        let settings = PrimarySidebarItemView::new(
             "/settings",
             "Settings",
-            self.active_page == ActivePage::Settings,
+            Pages::Settings,
+            self.active_page == Pages::Settings,
+        );
+
+        let padelboard = SecondarySidebarItemView::new(
+            "/projects/padelboard",
+            "Padelboard",
+            "bg-indigo-500",
+            true,
         );
 
         html! {
@@ -51,10 +65,10 @@ impl View for SidebarView {
                 </div>
                 <nav class="mt-5 flex-1" ariaLabel="Sidebar">
                   <div class="px-2 space-y-1">
-                 </div>
                     { home.render() }
                     { targets.render() }
                     { tasks.render() }
+                  </div>
                   <hr
                     class="border-t border-gray-200 my-5"
                     ariaHidden="true"
@@ -74,6 +88,7 @@ impl View for SidebarView {
                       role="group"
                       ariaLabelledby="teams-headline"
                     >
+                    { padelboard.render() }
                    </div>
                   </div>
                 </nav>

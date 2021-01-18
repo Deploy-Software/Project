@@ -40,7 +40,7 @@ impl Client {
     pub fn new(initial_state: &str) -> Client {
         // In a real app you'd typically uncomment this line
         // #[cfg(debug_assertions)]
-        console_log::init_with_level(Level::Debug);
+        console_log::init_with_level(Level::Debug).unwrap();
 
         console_error_panic_hook::set_once();
 
@@ -54,7 +54,9 @@ impl Client {
         }));
 
         app.store.borrow_mut().set_after_route(Box::new(|new_path| {
-            history().push_state_with_url(&JsValue::null(), "Rust Web App", Some(new_path));
+            history()
+                .push_state_with_url(&JsValue::null(), "Rust Web App", Some(new_path))
+                .unwrap();
         }));
 
         let store = Rc::clone(&app.store);
@@ -64,8 +66,8 @@ impl Client {
 
             store.borrow_mut().msg(&Msg::SetPath(path))
         };
-        let on_popstate = Box::new(on_popstate) as Box<FnMut(_)>;
-        let mut on_popstate = Closure::wrap(on_popstate);
+        let on_popstate = Box::new(on_popstate) as Box<dyn FnMut(_)>;
+        let on_popstate = Closure::wrap(on_popstate);
         window().set_onpopstate(Some(on_popstate.as_ref().unchecked_ref()));
         on_popstate.forget();
 
@@ -118,7 +120,7 @@ fn intercept_relative_links(store: Rc<RefCell<Store>>) {
             }
         }
     };
-    let on_anchor_click = Closure::wrap(Box::new(on_anchor_click) as Box<FnMut(_)>);
+    let on_anchor_click = Closure::wrap(Box::new(on_anchor_click) as Box<dyn FnMut(_)>);
 
     window()
         .add_event_listener_with_callback("click", on_anchor_click.as_ref().unchecked_ref())

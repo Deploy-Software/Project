@@ -4,18 +4,18 @@ use crate::views::toolbar::ToolbarView;
 
 use virtual_dom_rs::prelude::*;
 
-pub struct HomeView {}
+pub struct SettingsView {}
 
-impl HomeView {
-    pub fn new() -> HomeView {
-        HomeView {}
+impl SettingsView {
+    pub fn new() -> SettingsView {
+        SettingsView {}
     }
 }
 
-impl View for HomeView {
+impl View for SettingsView {
     fn render(&self) -> VirtualNode {
-        let nav_bar = SidebarView::new(Pages::Home).render();
-        let toolbar = ToolbarView::new("Home").render();
+        let nav_bar = SidebarView::new(Pages::Settings).render();
+        let toolbar = ToolbarView::new("Settings").render();
 
         html! {
         <div>
