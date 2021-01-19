@@ -85,6 +85,11 @@ fn sign_in_route() -> VirtualNode {
     SignInView::new().render()
 }
 
+#[route(path = "/sign_up")]
+fn sign_up_route() -> VirtualNode {
+    SignUpView::new().render()
+}
+
 #[route(
   path = "/targets",
   on_visit = download_contributors_json
@@ -171,6 +176,7 @@ fn make_router(store: Rc<RefCell<Store>>) -> Rc<Router> {
         index_route,
         initial_route,
         sign_in_route,
+        sign_up_route,
         targets_route,
         target_route,
         tasks_route,

@@ -25,6 +25,9 @@ pub use self::settings_view::*;
 pub mod sign_in_view;
 pub use self::sign_in_view::*;
 
+pub mod sign_up_view;
+pub use self::sign_up_view::*;
+
 pub mod initial_view;
 pub use self::initial_view::*;
 
