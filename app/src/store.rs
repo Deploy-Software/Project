@@ -42,7 +42,6 @@ impl Store {
             }
             _ => self.state.msg(msg),
         }
-
         // Whenever we update state we'll let all of our listeners know that state was updated
         for callback in self.listeners.iter() {
             callback();

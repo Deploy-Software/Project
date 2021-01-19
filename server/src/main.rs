@@ -48,7 +48,7 @@ async fn main() {
         .finish();
 
     let graphql_post = warp::path("graphql")
-        .and(warp::header::optional::<String>("token"))
+        .and(warp::cookie::optional("token"))
         .and(async_graphql_warp::graphql(schema.clone()))
         .and_then(
             |token,
@@ -65,14 +65,14 @@ async fn main() {
         );
 
     let index = warp::path::end()
-        .and(warp::header::optional::<String>("token"))
+        .and(warp::cookie::optional("token"))
         .map(|token| routes::respond("/".to_string(), token));
     let graphql_playground = warp::path("playground")
         .and(warp::get())
         .map(|| routes::playground());
     let examples = warp::path("static").and(warp::fs::dir(static_files));
     let catch_all = warp::path!(String)
-        .and(warp::header::optional::<String>("token"))
+        .and(warp::cookie::optional("token"))
         .map(|path, token| routes::respond(path, token));
 
     let routes = index

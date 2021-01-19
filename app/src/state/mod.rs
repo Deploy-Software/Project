@@ -50,7 +50,7 @@ impl State {
         };
     }
 
-    pub fn click_count(&self) -> Option<&str> {
+    pub fn token(&self) -> Option<&str> {
         match &self.token {
             Some(token) => Some(token),
             None => None,

@@ -3,6 +3,7 @@
 pub use crate::state::*;
 pub use crate::store::*;
 use crate::views::*;
+use cynic::QueryBuilder;
 use router_rs::prelude::*;
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -20,7 +21,7 @@ mod views;
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_name = "downloadJson")]
-    pub fn download_json(path: &str, callback: &js_sys::Function);
+    pub fn download_json(path: &str, data: &str, callback: &js_sys::Function);
 }
 
 pub struct App {
@@ -68,8 +69,8 @@ impl App {
 }
 
 #[route(path = "/")]
-fn home_route() -> VirtualNode {
-    HomeView::new().render()
+fn index_route(store: Provided<Rc<RefCell<Store>>>) -> VirtualNode {
+    IndexView::new(Rc::clone(&store)).render()
 }
 
 // @book start on-visit-example
@@ -111,6 +112,20 @@ fn settings_route() -> VirtualNode {
     SettingsView::new().render()
 }
 
+mod query_dsl {
+    cynic::query_dsl!("schema.graphql");
+}
+
+#[derive(cynic::QueryFragment, Debug)]
+#[cynic(
+    schema_path = "schema.graphql",
+    query_module = "query_dsl",
+    graphql_type = "QueryRoot"
+)]
+struct TokenConnection {
+    current_token: Option<String>,
+}
+
 fn download_contributors_json(store: Provided<Rc<RefCell<Store>>>) {
     // In order to check if the download has already been initiated, we must
     // wrap the possibility of a download attempt in a closure and pass it to
@@ -122,14 +137,12 @@ fn download_contributors_json(store: Provided<Rc<RefCell<Store>>>) {
         if !store.borrow().has_initiated_contributors_download() {
             store.borrow_mut().msg(&Msg::InitiatedContributorsDownload);
 
-            let store = Rc::clone(&store);
             let callback = Closure::wrap(Box::new(move |json: JsValue| {
-                store.borrow_mut().msg(&Msg::SetContributorsJson(json));
+                println!("{:?}", json);
             }) as Box<dyn FnMut(JsValue)>);
-            download_json(
-                "https://api.github.com/repos/chinedufn/percy/contributors",
-                callback.as_ref().unchecked_ref(),
-            );
+            let operation = TokenConnection::build(());
+            let query = serde_json::to_string(&operation).unwrap();
+            download_json("/graphql", &query, callback.as_ref().unchecked_ref());
 
             // TODO: Store and drop the callback instead of leaking memory.
             callback.forget();
@@ -155,7 +168,7 @@ fn make_router(store: Rc<RefCell<Store>>) -> Rc<Router> {
     router.provide(store);
 
     router.set_route_handlers(create_routes![
-        home_route,
+        index_route,
         initial_route,
         sign_in_route,
         targets_route,

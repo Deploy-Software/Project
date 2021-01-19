@@ -13,15 +13,21 @@
       #HTML_INSERTED_HERE_BY_SERVER#
   </div>
   <script>
-    function downloadJson(path, callback) {
-      fetch(path)
+    function downloadJson(path, data, callback) {
+        fetch(path, {
+          method: 'POST',
+          headers: {
+	    'content-type': 'application/json'
+          },
+          body: data
+        })
         .then(function(response) {
           return response.json();
         })
         .then(function(json) {
             callback(json);
         });
-    }
+   }
   </script>
   <script type=module>
     let client

@@ -1,0 +1,63 @@
+schema {
+  query: QueryRoot
+  mutation: MutationRoot
+  subscription: SubscriptionRoot
+}
+
+"""Directs the executor to query only when the field exists."""
+directive @ifdef on FIELD
+
+"""
+Direct the client to resolve this field locally, either from the cache or local resolvers.
+"""
+directive @client(
+  """
+  When true, the client will never use the cache for this value. See
+  https://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true
+  """
+  always: Boolean
+) on FIELD | FRAGMENT_DEFINITION | INLINE_FRAGMENT
+
+"""
+Export this locally resolved field as a variable to be used in the remainder of this query. See
+https://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables
+"""
+directive @export(
+  """The variable name to export this field as."""
+  as: String!
+) on FIELD
+
+"""
+Specify a custom store key for this result. See
+https://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive
+"""
+directive @connection(
+  """Specify the store key."""
+  key: String!
+
+  """
+  An array of query argument names to include in the generated custom store key.
+  """
+  filter: [String!]
+) on FIELD
+
+type MutationRoot {
+  signUp(email: String!, password: String!): String!
+  signIn(email: String!, password: String!): String!
+  addPersonalData(name: String!, jobTitle: String): String!
+  newOrganization(name: String!): String!
+  newProject(organizationId: Int!, name: String!): String!
+  newTarget(projectId: Int!, name: String!, about: String, value: String!): String!
+  newTargetComment(targetId: Int!, text: String!): String!
+  newTargetActivity(targetId: Int!, text: String!): String!
+  newTask(targetId: Int!, name: String!, about: String): String!
+  newTaskActivity(taskId: Int!, text: String!): String!
+}
+
+type QueryRoot {
+  currentToken: String
+}
+
+type SubscriptionRoot {
+  values: Int!
+}

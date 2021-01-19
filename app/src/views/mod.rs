@@ -1,3 +1,6 @@
+pub mod index_view;
+pub use self::index_view::*;
+
 pub mod home_view;
 pub use self::home_view::*;
 
