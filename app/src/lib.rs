@@ -29,8 +29,8 @@ pub struct App {
 }
 
 impl App {
-    pub fn new(count: u32, path: String) -> App {
-        let state = State::new(count);
+    pub fn new(path: String, token: Option<String>) -> App {
+        let state = State::new(token);
         let store = Rc::new(RefCell::new(Store::new(state)));
 
         store.borrow_mut().msg(&Msg::SetPath(path));
@@ -60,7 +60,6 @@ impl App {
 
 impl App {
     pub fn render(&self) -> VirtualNode {
-        println!("{}", self.store.borrow().path());
         match self.router.view(self.store.borrow().path()) {
             Some(route) => route,
             None => NotFoundView::new().render(),

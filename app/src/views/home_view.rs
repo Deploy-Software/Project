@@ -1,8 +1,106 @@
+use crate::views::icons::*;
 use crate::views::sidebar::Pages;
 use crate::views::sidebar::SidebarView;
 use crate::views::toolbar::ToolbarView;
 
 use virtual_dom_rs::prelude::*;
+
+enum StatisticsIcon {
+    Users,
+    Mail,
+    Click,
+}
+
+struct StatisticCard {
+    title: &'static str,
+    number: &'static str,
+    change: &'static str,
+    icon: StatisticsIcon,
+    positive: bool,
+}
+
+impl StatisticCard {
+    pub fn new(
+        title: &'static str,
+        number: &'static str,
+        change: &'static str,
+        icon: StatisticsIcon,
+        positive: bool,
+    ) -> Self {
+        Self {
+            title,
+            number,
+            change,
+            icon,
+            positive,
+        }
+    }
+}
+
+impl View for StatisticCard {
+    fn render(&self) -> VirtualNode {
+        let text_class = match self.positive {
+            true => format!("ml-2 flex items-baseline text-sm font-semibold text-green-600"),
+            false => format!("ml-2 flex items-baseline text-sm font-semibold text-red-600"),
+        };
+
+        let arrow_icon = match self.positive {
+            true => arrow_up_icon("self-center flex-shrink-0 h-5 w-5 text-green-500"),
+            false => arrow_down_icon("self-center flex-shrink-0 h-5 w-5 text-red-500"),
+        };
+
+        let helper_text = match self.positive {
+            true => "Increased by",
+            false => "Decreased by",
+        };
+
+        let icon = match &self.icon {
+            StatisticsIcon::Users => users_icon("h-6 w-6 text-white"),
+            StatisticsIcon::Mail => mail_icon("h-6 w-6 text-white"),
+            StatisticsIcon::Click => click_icon("h-6 w-6 text-white"),
+        };
+
+        html! {
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            {icon}
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dt class="text-sm font-medium text-gray-500 truncate">
+                                {self.title}
+                            </dt>
+                            <dd class="flex items-baseline">
+                                <div class="text-2xl font-semibold text-gray-900">
+                                    {self.number}
+                                </div>
+                                <div class={text_class}>
+                                    {arrow_icon}
+                                    <span class="sr-only">
+                                        {helper_text}
+                                    </span>
+                                    {self.change}
+                                </div>
+                            </dd>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-4 sm:px-6">
+                    <div class="text-sm">
+                        <a
+                            href="/targets/1"
+                            class="font-medium text-indigo-600 hover:text-indigo-500"
+                        >
+                            View target
+                            <span class="sr-only"> {self.title}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
 
 struct TaskListCard {
     action: &'static str,
@@ -104,6 +202,33 @@ impl View for HomeView {
         let nav_bar = SidebarView::new(Pages::Home).render();
         let toolbar = ToolbarView::new("Home").render();
 
+        let statistics_list: Vec<VirtualNode> = vec![
+            StatisticCard::new(
+                "Total Subscribers",
+                "71,897",
+                "122",
+                StatisticsIcon::Users,
+                true,
+            ),
+            StatisticCard::new(
+                "Avg. Open Rate",
+                "58.16%",
+                "5.4%",
+                StatisticsIcon::Mail,
+                true,
+            ),
+            StatisticCard::new(
+                "Avg. Click Rate",
+                "24.57%",
+                "3.2%",
+                StatisticsIcon::Click,
+                false,
+            ),
+        ]
+        .into_iter()
+        .map(|item_num| item_num.render())
+        .collect();
+
         let task_list: Vec<VirtualNode> = vec![
             TaskListCard::new(
                 "Applied to",
@@ -160,6 +285,7 @@ impl View for HomeView {
                       Targets
                     </h2>
                     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    { statistics_list }
                    </dl>
                   </div>
                   <div class="mt-4">

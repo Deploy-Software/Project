@@ -1,24 +1,22 @@
 use serde::{Deserialize, Serialize};
 use serde_json;
-use std::cell::Cell;
-use std::rc::Rc;
 
 mod msg;
 pub use self::msg::Msg;
 
 #[derive(Serialize, Deserialize)]
 pub struct State {
-    click_count: Rc<Cell<u32>>,
+    token: Option<String>,
     path: String,
     contributors: Option<Vec<PercyContributor>>,
     has_initiated_contributors_download: bool,
 }
 
 impl State {
-    pub fn new(count: u32) -> State {
+    pub fn new(token: Option<String>) -> State {
         State {
             path: "/".to_string(),
-            click_count: Rc::new(Cell::new(count)),
+            token: token,
             contributors: None,
             has_initiated_contributors_download: false,
         }
@@ -38,7 +36,10 @@ impl State {
 impl State {
     pub fn msg(&mut self, msg: &Msg) {
         match msg {
-            Msg::Click => self.increment_click(),
+            Msg::SetToken(token) => match token {
+                Some(token) => self.set_token(Some(token.to_string())),
+                None => self.set_token(None),
+            },
             Msg::SetPath(path) => self.set_path(path.to_string()),
             Msg::SetContributorsJson(json) => {
                 self.contributors = Some(json.into_serde().unwrap());
@@ -49,8 +50,11 @@ impl State {
         };
     }
 
-    pub fn click_count(&self) -> u32 {
-        self.click_count.get()
+    pub fn click_count(&self) -> Option<&str> {
+        match &self.token {
+            Some(token) => Some(token),
+            None => None,
+        }
     }
 
     pub fn path(&self) -> &str {
@@ -67,8 +71,8 @@ impl State {
 }
 
 impl State {
-    fn increment_click(&mut self) {
-        self.click_count.set(self.click_count.get() + 1);
+    fn set_token(&mut self, token: Option<String>) {
+        self.token = token;
     }
 
     fn set_path(&mut self, path: String) {

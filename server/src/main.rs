@@ -64,12 +64,16 @@ async fn main() {
             },
         );
 
-    let index = warp::path::end().map(|| routes::respond("/".to_string()));
+    let index = warp::path::end()
+        .and(warp::header::optional::<String>("token"))
+        .map(|token| routes::respond("/".to_string(), token));
     let graphql_playground = warp::path("playground")
         .and(warp::get())
         .map(|| routes::playground());
     let examples = warp::path("static").and(warp::fs::dir(static_files));
-    let catch_all = warp::path!(String).map(|path| routes::respond(path));
+    let catch_all = warp::path!(String)
+        .and(warp::header::optional::<String>("token"))
+        .map(|path, token| routes::respond(path, token));
 
     let routes = index
         .or(graphql_playground)
